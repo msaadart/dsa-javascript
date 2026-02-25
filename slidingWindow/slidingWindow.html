@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Window</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+        background-color: rgb(48, 48, 48);
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<body>
+
+    <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color:blue;background-color: rgb(240, 240, 240);padding: 7px;">Sliding Window ➡️🪟</h2>
+
+    <div class="container-fluid text-white">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-primary ms-4">SubArray</h3>
+                <pre>
+let daysProfit = [50, 20, 40, 80, 10, 30, 40];
+
+function func(k) {
+    let sum = 0;
+    let max = 0;
+    let min = 0;
+    let count = 0;
+
+    for (let i = 0; i < k; i++) {
+        sum += daysProfit[i];
+    }
+    console.log("initial window :", sum);
+
+    min = sum;
+    max = sum;
+
+    for (let j = k; j < daysProfit.length; j++) {
+        sum = sum + daysProfit[j] - daysProfit[j - k]
+        count = j - k + 1;
+        min = Math.min(min, sum);
+        max = Math.max(max, sum);
+        console.log("sliding window : ", sum);
+    }
+    console.log("min window : ", min);
+    console.log("max window : ", max);
+    console.log("sliding count : ", count);
+
+}
+func(3);
+                </pre>
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-primary ms-4">SubString</h3>
+                <pre>
+    function longestSubString(str) {
+    let left = 0;
+    let maxLength = 0;
+    let charSet = new Set();
+
+    for (let right = 0; right < str.length; right++) {
+        while (charSet.has(str[right])) {
+            charSet.delete(str[left]);
+            left++
+        }
+        charSet.add(str[right]);
+
+        let crntWindowSize = right - left + 1;
+        if (crntWindowSize > maxLength) {
+            maxLength = crntWindowSize
+        }
+    }
+    return maxLength;
+    }
+    console.log("Longest substring :", longestSubString("aioaeoiu"));
+                </pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-primary ms-4">Fruits Into Basket</h3>
+
+                <pre>
+    var totalFruit = function(fruits) {
+    let left = 0;
+    let maxFruits = 0;
+    let basket = new Map();
+
+    for (let right = 0; right < fruits.length; right++) {
+
+        let rightFruit = fruits[right];
+        basket.set(rightFruit, (basket.get(rightFruit) || 0) + 1)
+
+        while (basket.size > 2) {
+            let leftFruit = fruits[left];
+            basket.set(leftFruit, basket.get(leftFruit) - 1);
+
+            if (basket.get(leftFruit) === 0) {
+                basket.delete(leftFruit);
+            }
+            left++
+        }
+        maxFruits = Math.max(maxFruits, right - left + 1);
+    }
+    return maxFruits;
+}
+console.log(totalFruit([1, 1, 2, 2, 3, 3, 3]))
+                </pre>
+            </div>
+        </div>
+    </div>
+    <script src="slidingWindow.js"></script>
+</body>
+
+</html>

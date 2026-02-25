@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Temperatures</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h2>Weather Casting </h2>
+    </div>
+
+    <div class="input-field">
+        <input type="number" id="temperatureInput" placeholder="Enter today's temperature">
+        <button onclick="addTemp()" class="m-btn">Add</button>
+    </div>
+
+    <div class="container">
+        <div class="sub sub-one">
+            <div class="box">
+                <h3>Last 7 Days</h3>
+                <p id="days"></p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sub sub-two">
+            <div class="box">
+                <h3>Average</h3>
+                <p id="avg"></p>
+
+            </div>
+            <div class="box">
+                <h3>Today</h3>
+                <p id="today"></p>
+            </div>
+
+            <div class="box">
+                <h3>Lowest Temp</h3>
+                <p id="min"></p>
+            </div>
+
+            <div class="box">
+                <h3>Higest Temp</h3>
+                <p id="max"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sub sub-three">
+            <div class="box">
+                <p id="avg-color" style="font-weight: bold;color: white !important;">Average : </p>
+                <p id="avg-detail"></p>
+            </div>
+            <div class="box">
+                <p id="today-color" style="font-weight: bold;color: white !important;">Today : </p>
+                <p id="today-detail"></p>
+            </div>
+            <div class="box">
+                <p id="lowest-color" style="font-weight: bold;color: white !important;">Lowest : </p>
+                <p id="lowest-detail"></p>
+            </div>
+            <div class="box">
+                <p id="highest-color" style="font-weight: bold;color: white !important;">Highest : </p>
+                <p id="highest-detail"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+
+</html>
