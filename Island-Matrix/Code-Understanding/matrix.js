@@ -90,6 +90,7 @@
 
 // With BFS -->
 
+
 let grid = [
     [1, 2, 3],
     [4, 5, 6],
@@ -108,14 +109,14 @@ while (queue.length > 0) {
     let [r, c] = queue.shift();
     console.log(grid[r][c]);
 
-    let directions = [
+    direction = [
         [-1, 0],
         [1, 0],
         [0, -1],
         [0, 1]
     ];
 
-    for (let [dr, dc] of directions) {
+    for (let [dr, dc] of direction) {
         let newR = r + dr;
         let newC = c + dc;
 
