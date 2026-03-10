@@ -79,52 +79,52 @@
 
 
 
-let place = [
-    [1, 1, 0],
-    [1, 1, 0],
-    [1, 0, 1],
-];
+// let place = [
+//     [1, 1, 0],
+//     [1, 1, 0],
+//     [1, 0, 1],
+// ];
 
-let startR = 1;
-let startC = 1;
-let newColor = 2;
-let oldColor = place[startR][startC];
+// let startR = 1;
+// let startC = 1;
+// let newColor = 2;
+// let oldColor = place[startR][startC];
 
-if (oldColor === newColor) {
-    console.log("No change needed");
-} else {
+// if (oldColor === newColor) {
+//     console.log("No change needed");
+// } else {
 
-    let queue = [];
-    queue.push([startR, startC]);
-    place[startR][startC] = newColor;
+//     let queue = [];
+//     queue.push([startR, startC]);
+//     place[startR][startC] = newColor;
 
-    let directions = [
-        [-1, 0],
-        [1, 0],
-        [0, -1],
-        [0, 1]
-    ];
+//     let directions = [
+//         [-1, 0],
+//         [1, 0],
+//         [0, -1],
+//         [0, 1]
+//     ];
 
-    while (queue.length > 0) {
-        let [r, c] = queue.shift();
+//     while (queue.length > 0) {
+//         let [r, c] = queue.shift();
 
-        for (let [dr, dc] of directions) {
-            let newR = r + dr;
-            let newC = c + dc;
+//         for (let [dr, dc] of directions) {
+//             let newR = r + dr;
+//             let newC = c + dc;
 
-            if (
-                newR >= 0 &&
-                newR < place.length &&
-                newC >= 0 &&
-                newC < place[0].length &&
-                place[newR][newC] === oldColor
-            ) {
-                queue.push([newR, newC]);
-                place[newR][newC] = newColor;
-            }
-        }
-    }
-}
+//             if (
+//                 newR >= 0 &&
+//                 newR < place.length &&
+//                 newC >= 0 &&
+//                 newC < place[0].length &&
+//                 place[newR][newC] === oldColor
+//             ) {
+//                 queue.push([newR, newC]);
+//                 place[newR][newC] = newColor;
+//             }
+//         }
+//     }
+// }
 
-console.log("Flood Filled Grid:");
-console.log(place);
+// console.log("Flood Filled Grid:");
+// console.log(place);
