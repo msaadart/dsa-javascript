@@ -55,26 +55,26 @@ func(3);
 // subString --
 // largest substring without repeating character // DEMO // ->
 
-// var longestSubString = function(str) {
-//     let left = 0;
-//     let maxLength = 0;
-//     let charSet = new Set();
+var longestSubString = function(str) {
+    let left = 0;
+    let maxLength = 0;
+    let charSet = new Set();
 
-//     for (let right = 0; right < str.length; right++) {
+    for (let right = 0; right < str.length; right++) {
 
-//         while (charSet.has(str[right])) {
-//             charSet.delete(str[left]);
-//             left++
-//         }
-//         charSet.add(str[right]);
-//         let crntWindowSize = right - left + 1;
-//         if (crntWindowSize > maxLength) {
-//             maxLength = crntWindowSize;
-//         }
-//     }
-//     return maxLength;
-// }
-// console.log('longest substring is :', longestSubString('aioaeoiu'));
+        while (charSet.has(str[right])) {
+            charSet.delete(str[left]);
+            left++
+        }
+        charSet.add(str[right]);
+        let crntWindowSize = right - left + 1;
+        if (crntWindowSize > maxLength) {
+            maxLength = crntWindowSize;
+        }
+    }
+    return maxLength;
+}
+console.log('longest substring is :', longestSubString('aioaeoiu'));
 
 
 
