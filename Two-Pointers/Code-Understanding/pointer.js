@@ -21,10 +21,10 @@
 
 // 2 -> Sorting concept and Comparison =>
 
-// let arr = [3, 5,6, 4, 6, 1];
+// let arr = [3, 5, 4, 6, 1]; // 1 3 4 5 6   
 // arr.sort((a, b) => a - b);
 
-// let target = 7;
+// let target = 8;
 // let left = 0;
 // let right = arr.length - 1;
 
@@ -67,16 +67,16 @@
 
 // Swapping =>
 
-let arr = [1, 2, 3, 4, 5, 6]
+// let arr = [1, 2, 3, 4, 5, 6]
 
-let left = 0;
-let right = arr.length - 1;
+// let left = 0;
+// let right = arr.length - 1;
 
-while (left < right) {
+// while (left < right) {
 
-    [arr[left], arr[right]] = [arr[right], arr[left]];
-    left++;
-    right--;
-}
+//     [arr[left], arr[right]] = [arr[right], arr[left]];
+//     left++;
+//     right--;
+// }
 
-console.log(arr);
+// console.log(arr);
