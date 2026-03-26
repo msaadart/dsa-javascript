@@ -29,28 +29,44 @@
 
 // 2️ - Dutch National Flag Problem
 
-let arr2 = ["spam", "imp", "imp", "ib", "ib", "spam", "imp", "ib", "ib", "spam", "imp", "imp"];
-let low = 0;
-let mid = 0;
-let high = arr2.length - 1;
+// let arr2 = ["spam", "imp", "imp", "ib", "ib", "spam", "imp", "ib", "ib", "spam", "imp", "imp"];
+// let low = 0;
+// let mid = 0;
+// let high = arr2.length - 1;
 
-while (mid <= high) {
-    if (arr2[mid] === "spam") {
-        [arr2[low], arr2[mid]] = [arr2[mid], arr2[low]]
-        low++;
-        mid++;
-    } else if (arr2[mid] === "ib") {
-        mid++;
-    } else {
-        [arr2[mid], arr2[high]] = [arr2[high], arr2[mid]]
-        high--;
-    }
-}
+// while (mid <= high) {
+//     if (arr2[mid] === "spam") {
+//         [arr2[low], arr2[mid]] = [arr2[mid], arr2[low]]
+//         low++;
+//         mid++;
+//     } else if (arr2[mid] === "ib") {
+//         mid++;
+//     } else {
+//         [arr2[mid], arr2[high]] = [arr2[high], arr2[mid]]
+//         high--;
+//     }
+// }
 
-console.log(arr2)
+// console.log(arr2)
 
 // history / all - > "spam", "imp", "imp", "ib", "ib", "spam", "imp", "ib", "ib", "spam", "imp", "imp"
 // screen - > "spam", "imp", "imp"
 // inbox - >
 // important - >
 // spam - >
+
+
+// let prices = [1, 2, 5, 3, 4]; // 1 2,3,4,5
+// let left = 0;
+// let right = prices.length - 1;
+
+// while (left <= right) {
+//     if (prices[left] > prices[right]) {
+//         [prices[left], prices[right]] = [prices[right], prices[left]];
+//         left++;
+//     } else {
+//         right--
+//     }
+// }
+
+// console.log(prices)
