@@ -1,8 +1,9 @@
 // Problems //
 
 // 1 - Squaring a Sorted Array
-let arr = [-2, -4, 9, -1, 8, 12];
-arr.sort((a, b) => a - b)
+let arr = [3, -4, 9, -1, 8, 12];
+// let arr = [-4, -1, 3, 8, 9, 12];
+// arr.sort((a, b) => a - b)
 
 let left = 0;
 let right = arr.length - 1;
@@ -10,8 +11,8 @@ let res = new Array(arr.length);
 let i = arr.length - 1;
 
 while (left <= right) {
-    let leftSquare = arr[left] * arr[left];
-    let rightSquare = arr[right] * arr[right];
+    let leftSquare = arr[left] * 9 / 5 + 32 + "F";
+    let rightSquare = arr[right] * 9 / 5 + 32 + "F";
 
     if (leftSquare > rightSquare) {
         res[i] = leftSquare;
@@ -22,4 +23,5 @@ while (left <= right) {
     }
     i--;
 }
-console.log(res)
+
+console.log(res);
