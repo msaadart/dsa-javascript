@@ -13,74 +13,73 @@
 // my own logic //  end
 
 
-// sliding window technique - sum , count , min and max //
+// sliding window technique - sum ,count, , min and max //
 
 
-let daysProfit = [50, 20, 40, 80, 10, 30, 40];
+// let venue = [12, 14, 3, 11, 8, 9, 21, 16];
 
-function func(k) {
-    let sum = 0;
-    let max = 0;
-    let min = 0;
-    let count = 0;
+// function monthlyVenues(k) {
+//     let sum = 0;
+//     let min = 0;
+//     let max = 0;
+//     let tWindow = 0;
+//     let sWindow = 0;
 
-    for (let i = 0; i < k; i++) {
-        sum += daysProfit[i];
-    }
-    console.log("initial window :", sum);
+//     for (let i = 0; i < k; i++) {
+//         sum += venue[i];
+//     }
+//     console.log("initial", sum)
 
-    min = sum;
-    max = sum;
+//     min = sum;
+//     max = sum;
 
-    for (let j = k; j < daysProfit.length; j++) {
-        sum = sum + daysProfit[j] - daysProfit[j - k]
-        count = j - k + 1;
-        min = Math.min(min, sum);
-        max = Math.max(max, sum);
-        console.log("sliding window : ", sum);
-    }
-    console.log("min window : ", min);
-    console.log("max window : ", max);
-    console.log("sliding count : ", count);
-
-}
-func(3);
-
-
-
-
+//     for (let j = k; j < venue.length; j++) {
+//         sum = sum + venue[j] - venue[j - k]
+//         console.log("sliding", sum)
+//         min = Math.min(min, sum);
+//         max = Math.max(max, sum);
+//         tWindow = j - 1;
+//         sWindow = j - k + 1;
+//     }
+//     console.log("min", min)
+//     console.log("max", max)
+//     console.log("t window", tWindow)
+//     console.log("s window", sWindow)
+// }
+// monthlyVenues(3)
 
 
 
 // subString --
 // largest substring without repeating character // DEMO // ->
 
-var longestSubString = function(str) {
-    let left = 0;
-    let maxLength = 0;
-    let charSet = new Set();
 
-    for (let right = 0; right < str.length; right++) {
+// function largest(str) {
+//     let left = 0;
+//     let maxLength = 0;
+//     let charSet = new Set();
 
-        while (charSet.has(str[right])) {
-            charSet.delete(str[left]);
-            left++
-        }
-        charSet.add(str[right]);
-        let crntWindowSize = right - left + 1;
-        if (crntWindowSize > maxLength) {
-            maxLength = crntWindowSize;
-        }
-    }
-    return maxLength;
-}
-console.log('longest substring is :', longestSubString('aioaeoiu'));
-
-
+//     for (let right = 0; right < str.length; right++) {
+//         while (charSet.has(str[right])) {
+//             charSet.delete(str[left])
+//             left++
+//         }
+//         charSet.add(str[right]);
+//         let windowSize = right - left + 1;
+//         if (windowSize > maxLength) {
+//             maxLength = windowSize
+//         }
+//     }
+//     return maxLength;
+// }
+// console.log("largest substring window size is", largest("aioaaue"));
 
 
 
-// var totalFruit = function(fruits) {
+
+
+
+// function totalFruit(fruits) {
 //     let left = 0;
 //     let maxFruits = 0;
 //     let basket = new Map();
@@ -129,3 +128,17 @@ console.log('longest substring is :', longestSubString('aioaeoiu'));
 //
 // const names = ["farjad", "ebad", "saif", "ali", "mustajab"];
 // console.log(names.map((name) => name.length));
+
+
+// let allCities = ["Karachi", "Lahore", "Karachi", "Islamabad", "Lahore", "Karachi"];
+
+// let cityCount = new Map();
+
+// allCities.forEach(city => {
+//     if (cityCount.has(city)) {
+//         cityCount.set(city, cityCount.get(city) + 1)
+//     } else {
+//         cityCount.set(city, 1)
+//     }
+// });
+// console.log(cityCount)

@@ -1,30 +1,29 @@
 // Problems //
 
 // 1 - Squaring a Sorted Array
-// let arr = [3, -4, 9, -1, 8, 12];
-// // let arr = [-4, -1, 3, 8, 9, 12];
-// // arr.sort((a, b) => a - b)
+let arr = [3, -4, 9, -1, 8, 12];
+// arr.sort((a, b) => a - b)
 
-// let left = 0;
-// let right = arr.length - 1;
-// let res = new Array(arr.length);
-// let i = arr.length - 1;
+let left = 0;
+let right = arr.length - 1;
+let res = new Array(arr.length);
+let i = arr.length - 1;
 
-// while (left <= right) {
-//     let leftSquare = arr[left] * 9 / 5 + 32 + "F";
-//     let rightSquare = arr[right] * 9 / 5 + 32 + "F";
+while (left <= right) {
+    let leftSquare = arr[left] * 9 / 5 + 32 + "F";
+    let rightSquare = arr[right] * 9 / 5 + 32 + "F";
 
-//     if (leftSquare > rightSquare) {
-//         res[i] = leftSquare;
-//         left++
-//     } else {
-//         res[i] = rightSquare
-//         right--
-//     }
-//     i--;
-// }
+    if (leftSquare > rightSquare) {
+        res[i] = leftSquare;
+        left++
+    } else {
+        res[i] = rightSquare
+        right--
+    }
+    i--;
+}
 
-// console.log(res);
+console.log(res);
 
 
 // 2️ - Dutch National Flag Problem
@@ -70,3 +69,41 @@
 // }
 
 // console.log(prices)
+
+
+
+// 3 -  sort min window
+
+// let arr = [1, 2, 4, 3, 5];
+// let left = 0;
+// let right = arr.length - 1;
+
+// while (left < arr.length - 1 && arr[left] <= arr[left + 1]) {
+//     left++;
+// }
+// while (right > 0 && arr[right] >= arr[right - 1]) {
+//     right--;
+// }
+
+// if (left === arr.length - 1) {
+//     console.log(0);
+// } else {
+
+//     let min = Infinity;
+//     let max = -Infinity;
+
+//     for (let i = left; i <= right; i++) {
+//         if (arr[i] < min) min = arr[i];
+//         if (arr[i] > max) max = arr[i];
+//         console.log(arr[i])
+//     }
+
+//     while (left > 0 && arr[left - 1] > min) {
+//         left--;
+//     }
+//     while (right < arr.length - 1 && arr[right + 1] < max) {
+//         right++;
+//     }
+
+//     console.log("Window:", left, "to", right);
+// }

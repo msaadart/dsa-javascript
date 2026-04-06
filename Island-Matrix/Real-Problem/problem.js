@@ -103,10 +103,10 @@ console.log(place)
 //             console.log("water area is here")
 //         }
 //     }
-<<<<<<< HEAD
+
 //     console.log(output)
 // }
-=======
+
 // }
 // console.log("island", count);
 
@@ -215,4 +215,3 @@ console.log(place)
 
 // console.log("Flood Filled Grid:");
 // console.log(place);
->>>>>>> 2df3711827ba55d9c8f28772822ef67443705ead

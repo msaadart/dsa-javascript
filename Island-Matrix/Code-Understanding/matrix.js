@@ -1,16 +1,16 @@
 // // 2D array basic syntax //
 
-// let matrix = [
-//     [1, 2, 3],
-//     [4, 5, 6],
-//     [7, 8, 9]
-// ]
+let matrix = [
+    [1, 2, 3, 11],
+    [4, 5, 6, 12],
+    [7, 8, 9, 13]
+]
 
 // // nested loop ---- start
 // for (let i = 0; i < matrix.length; i++) {
-//     let output = "";
+//     output = "";
 //     for (let j = 0; j < matrix.length; j++) {
-//         output += matrix[i][j] + " "
+//         output += matrix[i][j] + " ";
 //     }
 //     console.log(output)
 // }
@@ -18,12 +18,14 @@
 
 
 
+
+
 // // built-in ---- start
 // flatMatrix = matrix.flat();
 // console.log(flatMatrix);
 // doubleMatrix = matrix.map(row => row.map(val => val * 2));
-// console.log(doubleMatrix)
-//     // built-in ---- end
+// console.log(doubleMatrix);
+// // built-in ---- end
 
 
 
@@ -33,7 +35,7 @@
 // for (let i = 0; i < matrix.length; i++) {
 //     transpose[i] = [];
 //     for (let j = 0; j < matrix.length; j++) {
-//         transpose[i][j] = matrix[j][i]
+//         transpose[i][j] = matrix[j][i];
 //     }
 // }
 // console.log(transpose)
@@ -43,14 +45,13 @@
 
 
 // // show only z-axis ---- start
+// let axis = [];
 // for (let i = 0; i < matrix.length; i++) {
-//     let axis = []
 //     for (let j = 0; j < matrix.length; j++) {
 //         axis = matrix[i++][j]
 //         console.log(axis)
 //     }
 // }
-
 
 
 
@@ -62,29 +63,28 @@
 //     [10, 20, 30],
 //     [40, 50, 60],
 //     [70, 80, 90]
-// ]
+// ];
 
 // function neighbour(r, c) {
-//     directions = [
+//     direction = [
 //         [-1, 0],
 //         [1, 0],
 //         [0, -1],
 //         [0, 1]
 //     ];
 
-//     directions.forEach(([dr, dc]) => {
-
+//     direction.forEach(([dr, dc]) => {
 //         let newR = r + dr;
 //         let newC = c + dc;
 
 //         if (newR >= 0 && newR < houses.length && newC >= 0 && newC < houses.length) {
-//             console.log("Neighbour is", houses[newR][newC])
+//             console.log("neighbour is", houses[newR][newC]);
 //         } else {
-//             console.log("Neighbour is not found");
+//             console.log("neighbour is not available")
 //         }
 //     });
 // }
-// neighbour(1, 1)
+// neighbour(1, 1);
 
 
 
