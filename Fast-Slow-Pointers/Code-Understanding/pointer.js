@@ -90,10 +90,11 @@ function detectCycle(head) {
         fast = fast.next.next;
 
         if (slow === fast) {
-            console.log("Cycle detected at node:", slow.data);
+            console.log("fast caught the slow at node :", slow.data);
             return slow;
         }
     }
     return null;
 }
-let meetingNode = detectCycle(node1);
+
+let meetingNode = detectCycle(node1)
