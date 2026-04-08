@@ -12,13 +12,13 @@
  let node3 = new Node(3);
  let node4 = new Node(4);
  let node5 = new Node(5);
- let node6 = new Node(6);
 
  node1.next = node2;
  node2.next = node3;
  node3.next = node4;
  node4.next = node5;
- node5.next = node6;
+
+
 
  function detectCycle(head) {
      let slow = head;
