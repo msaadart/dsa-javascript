@@ -5,12 +5,14 @@ ye ek technique hai jo continuous subarray / substring ko efficiently process kr
 hum ek window bnate hai array / string pr and window ko shrink / expand krte hain according to
 condition and har step mai result calculate krte hain without reprocessing everything , hum isko use
 krne ka asal maqsad hai nested loop ko avoid krna , jisy hmari time complexity mai bht difference ata
-hai
+hai .
+
 1 - Longest Substring with 'K' Distinct Characters -> is mai hum longest substring find krte hain iska (use
 case / real project) mai use hum for password bhi krte hain password ki strength check krne k liye woh
 sb isi approach se hota hai and post pr hashtag limits captions lgana is se hi hota hai , duplication
 detect krne k liye bhi that koi spam to nhi krha hai like msg koi send krta hai so if message mai kuch
-percent words same hain so usko bhi detect kr lega ye.
+percent words same hain so usko bhi detect kr lega ye .
+
 2 - Fruits into Baskets -> is mai hum maximum fruits rkh skte hain real projects ki bat krein to e-commerce
 mai history check krna sliding window se max 2 categories track krna ase hi bht se logics ho skti hain
 with this approach.
@@ -19,6 +21,7 @@ Island (Matrix Traversal) :
 
 ye hum use krte hain (Matrix) k har element tk jane k liye , row by row - column by column ya element k
 neighbor tk jane k liye is ka use case:
+
 1 - Number of islands -> Matrix mai connected regions ko count krna jitne connected hain woh island
 bnte hain single bhi hoga to island mai count hoga jese mere pas matrix hai us mai 2 trah k numbers hain
 (1 and 0) ab 1 mere pas land hai and 0 is water so 1 jaha bhi hoge and woh connected hain so woh pura
@@ -26,11 +29,13 @@ island bnega if single hai 1 koi connect nhi hai so woh bhi island hoga , iska u
 mai ata hai like kitna forest , traffic , water , island wala hissa hai hum jese maps mai dekhte hain agr
 traffic jam hota hai so show hota hai ye sb isi approach se hota hai and medical softwares mai bhi use
 hota hai.
+
 2 - Flood fill -> Connected areas pr krna , jese matrix ki bat ki to yaha jo connected hoge un pr kam krna
 jese editing app hai hum ek area choose kr k waha color fill krte hain to pura connected / chosen area
 mai color aa jata hai ase jaha hmein connected areas mai kch krna ho color fill , color change ya game
 development mai bat krein to waha map fill krna coloring etc ye sb krne mai hum flood fill approach use
 krte hain.
+
 3 - Cycle in a matrix : matrix mai loop detect krna that check krna k starting path loop mai to nhi arha
 like apna circle khatm kr k dobara same point pr to nhi arha iska use case hum networking mai bhi dekhte
 hain jb data packets mai ata hai so bht sa data asa hota hai jo dobara jakr arha hota hai , ase cases ajate
@@ -44,15 +49,18 @@ like agr mere pas 10000 ka data hai mujhe is mai se ek data chahiye ho skta hai 
 ho so agr hum sirf left ya right se find krein ge to time zyada lgega yehi kam hum 2 pointers lekr krein
 left and right so hum us se half aur kbhi kbhi half n half time mai kr lenge
 is k kch real scenarios / problems hain :
+
 1 - Squaring a sorted array -> yaha hmein ek array hai usko square mai krna hai har values ko convert
 krna hai square se ye aksr kam ata hai weather conditions mai and bht si jgah jaha hmare pas data hota
 hai but humein kbhi kbhar usko different angle se dekhna hota hai jese weather mai mujhe (celsius) by
 default hai but mujhe isko (fahrenheit) mai dekhna hai so mai 2 pointer pakr lunga jise easily ho jaye
+
 2 - Dutch national flag problem -> ye problem bht common hai ye flag k upar hai jis k 3 different colors
 hoty hain yehi sequence pr hum kam krte hain like hum apne data ko 3 parts mai rkhte hain jese hmare pas
 emails hoti hain us k andar (imp - spam - normal) is trah ki hoti hain to ye sb ek sath aayenge to smjh nhi
 aayega konsi kse read kre is liye approach krte hain that ye sb separate aayen ya koi bhi asa data jo
 hmein separate krna ho
+
 3 - Minimum window sort -> yaha hmein asi problem face hoti hai jaha sb data to ok hai bs kch nhi hai ho
 skta woh starting mai ho ya mid mai ya end pr to ab hum sara data to set nhi krege time lgega and bht sa
 delay ho skta hai so hum usi part ko fix kreinge jo sequence se nhi arha ye use case aksr data fetching ,
