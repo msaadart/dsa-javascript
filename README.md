@@ -66,18 +66,21 @@ fast and slow pointer ka use krte hain
 example mere pas ek road hai 10km ka and 2 cars hain ek slow hai and ek fast , fast slow se double hai
 like slow is 100kph so fast is 200kph mere pas straight road hai yaha zahir hai dono kbhi milege hi nhi
 even fast to apni end point chala jaye ga but agr road circular ho yani ground ho so yaha koi end point
-nhi hai and lazmi dono cars apas mai milegi asa point ayega jaha dono same place pr honge
+nhi hai and lazmi dono cars apas mai milegi asa point ayega jaha dono same place pr honge .
+
 1 - Middle of the linkedlist -> is mai hum linked list ka middle find krte hain ye krte is liye hain jese
 mere pas agr ek playlist hai ya ek large data hai agr usko ek sath layege to time lega is liye uska middle
 find kr k usko 2 halves mai kr dete hain k data find krne mai pehle se kam time lge example mere pas ek
 list hai us mai 1000 data hai agr 1000 data mai se kch lane ki try kre to 1000 ko hi find krega agr isko
 hum 2 mai divide kr dein ge to hmein us k half time lgega , approach yaha fast slow ase work krti hai k
-fast jitna hoga uska half data ka mid point hoga.
+fast jitna hoga uska half data ka mid point hoga .
+
 2 - Happy number -> yaha hmein data ko happy rkhna hota hai yani yaha hmein find krna hota hai k kahi
 (loop / circle) to nhi , is mai hum loop ko avoid kr rhe hoty hain aur yaha jaha bhi hmein loop detect
 hota hai hum usko avoid krne ki krte hain bcz loop ayega to end point hi nhi milega but ye un cases mai
 hai jaha hmein avoid krna hai bht si asi cases hoty hain jaha loop must hota hai , approach yaha fast
 slow ki asi hoti hai agr fast slow se meet ho gaye / detect ho gaya so means that loop / circle hai yaha.
+
 3 - Cycle in a circular array -> yaha bhi hmein (happy number) ki trah loop detect krna hota hai but yaha
 hum avoid nhi krte sirf detect krte hain bcz yaha wale case mai loop ayega hi ayega hum bs find kr rhe
 hoty hain k loop (kaha aya , kb kb aya) , example ek circle hai waha ek player hai woh kbhi kuch steps
