@@ -1,9 +1,9 @@
 // // 2D array basic syntax //
 
 let matrix = [
-    [1, 2, 3, 11],
-    [4, 5, 6, 12],
-    [7, 8, 9, 13]
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
 ]
 
 // // nested loop ---- start
@@ -44,7 +44,7 @@ let matrix = [
 
 
 
-// // show only z-axis ---- start
+// show only z-axis ---- start
 // let axis = [];
 // for (let i = 0; i < matrix.length; i++) {
 //     for (let j = 0; j < matrix.length; j++) {
@@ -67,10 +67,10 @@ let matrix = [
 
 // function neighbour(r, c) {
 //     direction = [
-//         [-1, 0],
-//         [1, 0],
-//         [0, -1],
-//         [0, 1]
+//         [-1, 0], // top
+//         [1, 0], // bottom
+//         [0, -1], // left
+//         [0, 1] // right
 //     ];
 
 //     direction.forEach(([dr, dc]) => {
@@ -84,45 +84,45 @@ let matrix = [
 //         }
 //     });
 // }
-// neighbour(1, 1);
+// neighbour(1, 2);
 
 
 
 // With BFS -->
 
 
-let grid = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-];
+// let grid = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+// ];
 
-let visited = Array.from({ length: grid.length }, () =>
-    Array(grid[0].length).fill(false)
-);
+// let visited = Array.from({ length: grid.length }, () =>
+//     Array(grid[0].length).fill(false)
+// );
 
-let queue = [];
-queue.push([0, 0]);
-visited[0][0] = true;
+// let queue = [];
+// queue.push([0, 0]);
+// visited[0][0] = true;
 
-while (queue.length > 0) {
-    let [r, c] = queue.shift();
-    console.log(grid[r][c]);
+// while (queue.length > 0) {
+//     let [r, c] = queue.shift();
+//     console.log(grid[r][c]);
 
-    direction = [
-        [-1, 0],
-        [1, 0],
-        [0, -1],
-        [0, 1]
-    ];
+//     direction = [
+//         [-1, 0],
+//         [1, 0],
+//         [0, -1],
+//         [0, 1]
+//     ];
 
-    for (let [dr, dc] of direction) {
-        let newR = r + dr;
-        let newC = c + dc;
+//     for (let [dr, dc] of direction) {
+//         let newR = r + dr;
+//         let newC = c + dc;
 
-        if (newR >= 0 && newR < grid.length && newC >= 0 && newC < grid[0].length && !visited[newR][newC]) {
-            queue.push([newR, newC]);
-            visited[newR][newC] = true;
-        }
-    }
-}
+//         if (newR >= 0 && newR < grid.length && newC >= 0 && newC < grid[0].length && !visited[newR][newC]) {
+//             queue.push([newR, newC]);
+//             visited[newR][newC] = true;
+//         }
+//     }
+// }

@@ -3,19 +3,19 @@
 
 
 
-// price = [100, 300, 400, 50, 30, 210, 90];
+price = [100, 300, 400, 50, 30, 210, 90];
 
-// lowPrice = price.sort((a, b) => a - b);
-// console.log("low to high price");
-// for (let i = 0; i < lowPrice.length; i++) {
-//     console.log(lowPrice[i])
-// }
+lowPrice = price.sort((a, b) => a - b);
+console.log("low to high price");
+for (let i = 0; i < lowPrice.length; i++) {
+    console.log(lowPrice[i])
+}
 
-// highPrice = price.sort((a, b) => b - a);
-// console.log("high to low price");
-// for (let i = 0; i < highPrice.length; i++) {
-//     console.log(highPrice[i])
-// }
+highPrice = price.sort((a, b) => b - a);
+console.log("high to low price");
+for (let i = 0; i < highPrice.length; i++) {
+    console.log(highPrice[i])
+}
 
 
 

@@ -1,6 +1,6 @@
 // Problems //
 
-// 1 - Squaring a Sorted Array
+// // 1 - Squaring a Sorted Array
 let arr = [3, -4, 9, -1, 8, 12];
 // arr.sort((a, b) => a - b)
 
@@ -10,8 +10,8 @@ let res = new Array(arr.length);
 let i = arr.length - 1;
 
 while (left <= right) {
-    let leftSquare = arr[left] * 9 / 5 + 32 + "F";
-    let rightSquare = arr[right] * 9 / 5 + 32 + "F";
+    let leftSquare = arr[left] * arr[left];
+    let rightSquare = arr[right] * arr[right];
 
     if (leftSquare > rightSquare) {
         res[i] = leftSquare;
@@ -72,7 +72,7 @@ console.log(res);
 
 
 
-// 3 -  sort min window
+
 
 // let arr = [1, 2, 4, 3, 5];
 // let left = 0;

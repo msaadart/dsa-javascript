@@ -53,41 +53,41 @@ function bfs(r, c) {
 
 // <2> --- Flood fill --- //
 
-place = [
-    [1, 1, 0],
-    [0, 1, 0],
-    [1, 0, 1]
-];
+// place = [
+//     [1, 1, 0],
+//     [0, 1, 0],
+//     [1, 0, 1]
+// ];
 
-let startR = 1;
-let startC = 1;
-let newColor = 2;
-let oldColor = place[startR][startC];
+// let startR = 1;
+// let startC = 1;
+// let newColor = 2;
+// let oldColor = place[startR][startC];
 
-let queue = [];
-queue.push([startR, startC]);
-place[startR][startC] = newColor;
+// let queue = [];
+// queue.push([startR, startC]);
+// place[startR][startC] = newColor;
 
-let direction = [
-    [-1, 0],
-    [1, 0],
-    [0, -1],
-    [0, 1]
-];
+// let direction = [
+//     [-1, 0],
+//     [1, 0],
+//     [0, -1],
+//     [0, 1]
+// ];
 
-while (queue.length > 0) {
-    let [row, col] = queue.shift();
-    for (let [dr, dc] of direction) {
-        let newR = row + dr;
-        let newC = col + dc;
+// while (queue.length > 0) {
+//     let [row, col] = queue.shift();
+//     for (let [dr, dc] of direction) {
+//         let newR = row + dr;
+//         let newC = col + dc;
 
-        if (newR >= 0 && newR < place.length && newC >= 0 && newC < place.length && place[newR][newC] === oldColor) {
-            queue.push([newR, newC]);
-            place[newR][newC] = newColor;
-        }
-    }
-}
-console.log(place)
+//         if (newR >= 0 && newR < place.length && newC >= 0 && newC < place.length && place[newR][newC] === oldColor) {
+//             queue.push([newR, newC]);
+//             place[newR][newC] = newColor;
+//         }
+//     }
+// }
+// console.log(place)
 
 
 
