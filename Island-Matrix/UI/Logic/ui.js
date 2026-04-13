@@ -1,14 +1,17 @@
+/// 1 - real life use case -> 
+
 let place = [
-    [0, 0, 0, 1, 0],
-    [0, 1, 1, 0, 0],
     [1, 0, 1, 1, 0],
-    [0, 1, 1, 0, 1],
-    [0, 1, 0, 1, 1]
+    [0, 1, 1, 0, 0],
+    [1, 0, 0, 1, 1],
+    [1, 0, 1, 0, 1],
+    [0, 1, 1, 0, 0]
 ];
 
 let gridDiv = document.getElementById("grid");
 
-function renderGrid() {
+function showGridAreas() {
+
     gridDiv.innerHTML = "";
 
     for (let i = 0; i < place.length; i++) {
@@ -24,25 +27,29 @@ function renderGrid() {
             } else {
                 cell.classList.add("water")
             }
+
             cell.addEventListener("click", () => {
                 floodFill(i, j);
-                renderGrid();
+                showGridAreas();
             });
+
             gridDiv.appendChild(cell);
         }
     }
 }
-renderGrid();
+showGridAreas();
 
 function floodFill(r, c) {
 
+    if (place[r][c] !== 1)
+        return;
+
     let queue = [];
-    queue.push([r, c]);
+    queue.push([r, c])
 
     while (queue.length > 0) {
 
         let [row, col] = queue.shift();
-
         place[row][col] = 2;
 
         let directions = [
@@ -57,13 +64,9 @@ function floodFill(r, c) {
             let newR = row + dr;
             let newC = col + dc;
 
-            if (
-                newR >= 0 &&
-                newR < place.length &&
-                newC >= 0 &&
-                newC < place[0].length &&
-                place[newR][newC] === 1
-            ) {
+            if (newR >= 0 && newR < place.length &&
+                newC >= 0 && newC < place[0].length &&
+                place[newR][newC] === 1) {
                 queue.push([newR, newC]);
             }
         }
