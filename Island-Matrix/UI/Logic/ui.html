@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/LOGIC</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(22, 22, 22);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    }
+    
+    h1 {
+        color: lightcoral;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 700;
+        /* background-color: rgb(27, 27, 27); */
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 60px);
+        gap: 5px;
+        justify-content: center;
+    }
+    
+    .cell {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    .land {
+        background: green;
+        color: white;
+    }
+    
+    .water {
+        background: skyblue;
+    }
+    
+    .active {
+        background: yellow !important;
+    }
+</style>
+
+<body>
+
+    <h1>Map Explorer</h1>
+
+    <div id="grid" class="grid"></div>
+
+    <script src="ui.js "></script>
+</body>
+
+</html>
