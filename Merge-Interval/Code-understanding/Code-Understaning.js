@@ -23,7 +23,7 @@
 
 // 1 function -> comparsion and swapping 
 
-let arr = [1, 3, 4, 2, 5, 9, 8, 7, 6];
+let arr = [3, 4, 7, 8, 6, 9, 2, 1, 5];
 
 function heapify(arr, n, i) {
     let largest = i;
@@ -31,11 +31,11 @@ function heapify(arr, n, i) {
     let right = 2 * i + 2;
 
 
-    if (left < n && arr[left] > arr[largest]) {
+    if (left < n && arr[left] < arr[largest]) {
         largest = left;
     }
 
-    if (right < n && arr[right] > arr[largest]) {
+    if (right < n && arr[right] < arr[largest]) {
         largest = right;
     }
 
@@ -54,6 +54,6 @@ function buildHeap(arr) {
     }
 }
 
-console.log("Original Array:", arr);
+console.log("original array", arr);
 buildHeap(arr);
-console.log("Max-Heap Array:", arr);
+console.log("max-heap array", arr);
