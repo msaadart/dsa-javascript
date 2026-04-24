@@ -14,6 +14,7 @@
 
 
 
+
 // 2-- - find the duplicate numbers-- - //
 
 let arr2 = [1, 2, 3, 2, 2, 5, 4, 5];
