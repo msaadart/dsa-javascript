@@ -2,7 +2,7 @@
 
 // // 1 - Squaring a Sorted Array
 let arr = [3, -4, 9, -1, 8, 12];
-// arr.sort((a, b) => a - b)
+arr.sort((a, b) => a - b)
 
 let left = 0;
 let right = arr.length - 1;

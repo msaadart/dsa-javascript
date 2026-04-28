@@ -24,15 +24,15 @@
 //     let max = 0;
 //     let tWindow = 0;
 //     let sWindow = 0;
-
+//
 //     for (let i = 0; i < k; i++) {
 //         sum += venue[i];
 //     }
 //     console.log("initial", sum)
-
+//
 //     min = sum;
 //     max = sum;
-
+//
 //     for (let j = k; j < venue.length; j++) {
 //         sum = sum + venue[j] - venue[j - k]
 //         console.log("sliding", sum)
@@ -46,7 +46,7 @@
 //     console.log("t window", tWindow)
 //     console.log("s window", sWindow)
 // }
-// monthlyVenues(3)
+// monthlyVenues(3);
 
 
 
@@ -83,16 +83,16 @@
 //     let left = 0;
 //     let maxFruits = 0;
 //     let basket = new Map();
-
+//
 //     for (let right = 0; right < fruits.length; right++) {
-
+//
 //         let rightFruit = fruits[right];
 //         basket.set(rightFruit, (basket.get(rightFruit) || 0) + 1)
-
+//
 //         while (basket.size > 2) {
 //             let leftFruit = fruits[left];
 //             basket.set(leftFruit, basket.get(leftFruit) - 1);
-
+//
 //             if (basket.get(leftFruit) === 0) {
 //                 basket.delete(leftFruit);
 //             }
@@ -115,11 +115,11 @@
 // let data = [10, 27, 34, 55, 83, 99, 41, 62, 96, 18];
 // let tableSize = 10;
 // let table = new Array(tableSize);
-
+//
 // for (let x = 0; x < data.length; x++) {
 //     let value = data[x];
 //     let index = value % tableSize;
-
+//
 //     table[index] = value;
 // }
 // console.log(table);
