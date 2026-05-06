@@ -44,7 +44,6 @@ class Node {
     }
 }
 
-
 let node1 = new Node(1);
 let node2 = new Node(2);
 let node3 = new Node(3);
@@ -60,20 +59,18 @@ node4.prev = node3;
 node4.next = node5;
 node5.prev = node4;
 
-console.log("--- Moving Forward ---");
+console.log("Moving Forward")
 let current = node1;
 let tail = null;
 
 while (current !== null) {
     console.log(current.data);
-    if (current.next === null)
-        tail = current;
+    tail = current;
+    current = current.next;
 }
-current = current.next;
 
-console.log("--- Moving Backward ---");
+console.log("Moving Backward")
 current = tail;
-
 while (current !== null) {
     console.log(current.data);
     current = current.prev;
