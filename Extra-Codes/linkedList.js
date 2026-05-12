@@ -60,12 +60,52 @@
 
 
 
-///// sorted by pointers ///////
+// ///// sorted by pointers ///////
+
+// class Node {
+//     constructor(data) {
+//         this.data = data;
+//         this.next = null;
+//     }
+// }
+
+// let node1 = new Node(1);
+// let node2 = new Node(2);
+// let node3 = new Node(3);
+// let node4 = new Node(4);
+
+// node1.next = node2;
+// node2.next = node3;
+// node3.next = node4;
+
+// function middle(head) {
+//     slow = head;
+//     fast = head;
+
+//     while (fast !== null && fast.next !== null) {
+//         slow = slow.next;
+//         fast = fast.next.next;
+//     }
+//     return slow;
+// }
+// let meetingNode = middle(node1);
+// console.log(meetingNode.data)
+
+
+
+
+
+
+
+
+
+
 
 class Node {
     constructor(data) {
         this.data = data;
         this.next = null;
+        this.prev = null;
     }
 }
 
@@ -73,20 +113,35 @@ let node1 = new Node(1);
 let node2 = new Node(2);
 let node3 = new Node(3);
 let node4 = new Node(4);
+let node5 = new Node(5);
 
 node1.next = node2;
+node2.prev = node1;
 node2.next = node3;
+node3.prev = node2;
 node3.next = node4;
+node4.prev = node3;
+node4.next = node5;
+node5.prev = node4;
 
-function middle(head) {
-    slow = head;
-    fast = head;
 
-    while (fast !== null && fast.next !== null) {
-        slow = slow.next;
-        fast = fast.next.next;
-    }
-    return slow;
+console.log("forward")
+let current = node1;
+let tail = null;
+
+while (current !== null) {
+    console.log(current.data);
+    tail = current;
+    current = current.next;
 }
-let meetingNode = middle(node1);
-console.log(meetingNode.data)
+
+console.log("backward")
+current = tail;
+while (current !== null) {
+    console.log(current.data);
+    current = current.prev;
+}
+
+
+
+/// Reverse every K-element Sub-list
