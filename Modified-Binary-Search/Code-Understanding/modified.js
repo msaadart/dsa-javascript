@@ -14,9 +14,10 @@ function modified(arr, target) {  // 1 2 3 4 5 6 7 8 9
         } else {
             right = mid - 1;
         }
-
+        
     }
-    let err = "not found"
-    return err;
+    // let err = "not found"
+    // return err;
+    return -1;
 }
-console.log(modified([1, 7, 3, 9, 5, 6,2, 8, 4], 7));
+console.log(modified([1,2,4,6,7,8,10], 7));
