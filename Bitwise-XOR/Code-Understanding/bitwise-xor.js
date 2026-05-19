@@ -59,23 +59,55 @@
 
 
 /////// APPROACH BY MAP / HASHMAP METHOD -->
-let arr = [1, 2, 3, 4, 2, 1];
-let map = {};
+// let arr = [1, 2, 3, 4, 2, 1];
+// let map = {};
 
-for (let i = 0; i < arr.length; i++) {
-    let num = arr[i];
+// for (let i = 0; i < arr.length; i++) {
+//     let num = arr[i];
 
-    if (map[num]) {
-        map[num] += 1;
+//     if (map[num]) {
+//         map[num] += 1;
+//     }
+//     else {
+//         map[num] = 1;
+//     }
+// }
+//     let result = [];
+//     for(let key in map){
+//         if(map[key] === 1){
+//             result.push(Number(key));
+//         }
+//     }
+//     console.log(result);
+
+
+
+/////// 2nd sample problem -->
+let image = [
+    [1, 0, 0],
+    [0, 1, 1],
+    [1, 1, 0]
+];
+
+for (let i = 0; i < image.length; i++) {
+
+    // image[i].reverse();
+    let left = 0;
+    let right = image[i].length - 1;
+
+    while (left < right) {
+        [image[i][left], image[i][right]] = [image[i][right], image[i][left]];
+
+        left++;
+        right--;
     }
-    else {
-        map[num] = 1;
-    }
-}
-    let result = [];
-    for(let key in map){
-        if(map[key] === 1){
-            result.push(Number(key));
+
+    for (let j = 0; j < image[i].length; j++) {
+        if (image[i][j] === 0) {
+            image[i][j] = 1;
+        } else {
+            image[i][j] = 0;
         }
     }
-    console.log(result);
+}
+console.log(image);
