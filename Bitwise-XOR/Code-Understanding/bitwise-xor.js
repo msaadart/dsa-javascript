@@ -52,8 +52,8 @@
 //     } else {
 //         num2 = num2 ^ arr[i];
 //     }
-//     console.log(num1, num2);    
 // }
+//     console.log(num1, num2);    
 
 
 
@@ -102,12 +102,15 @@ for (let i = 0; i < image.length; i++) {
         right--;
     }
 
+    // for (let j = 0; j < image[i].length; j++) {
+    //     if (image[i][j] === 0) {
+    //         image[i][j] = 1;
+    //     } else {
+    //         image[i][j] = 0;
+    //     }
+    // }
     for (let j = 0; j < image[i].length; j++) {
-        if (image[i][j] === 0) {
-            image[i][j] = 1;
-        } else {
-            image[i][j] = 0;
-        }
-    }
+    image[i][j] = image[i][j] ^ 1;
+}
 }
 console.log(image);
