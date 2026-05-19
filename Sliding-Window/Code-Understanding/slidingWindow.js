@@ -112,17 +112,17 @@
 
 // hashing //  start
 
-// let data = [10, 27, 34, 55, 83, 99, 41, 62, 96, 18];
-// let tableSize = 10;
-// let table = new Array(tableSize);
-//
-// for (let x = 0; x < data.length; x++) {
-//     let value = data[x];
-//     let index = value % tableSize;
-//
-//     table[index] = value;
-// }
-// console.log(table);
+let data = [10, 27, 34, 55, 83, 99, 41, 62, 96, 18];
+let tableSize = 10;
+let table = new Array(tableSize);
+
+for (let x = 0; x < data.length; x++) {
+    let value = data[x];
+    let index = value % tableSize;
+
+    table[index] = value;
+}
+console.log(table);
 // end
 
 //

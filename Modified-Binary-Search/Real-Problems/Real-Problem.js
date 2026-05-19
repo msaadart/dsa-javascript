@@ -28,7 +28,6 @@
 //// Bitonic Array Maximum
 
 function bitonicMax(arr) {
-
     let left = 0;
     let right = arr.length - 1;
 
@@ -45,4 +44,4 @@ function bitonicMax(arr) {
     return arr[left];
 }
 
-console.log(bitonicMax([1, 3, 8, 4, 2]));
+console.log(bitonicMax([1, 3, 8, 4, 2]));   
