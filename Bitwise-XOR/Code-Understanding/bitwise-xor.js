@@ -110,7 +110,7 @@ for (let i = 0; i < image.length; i++) {
     //     }
     // }
     for (let j = 0; j < image[i].length; j++) {
-    image[i][j] = image[i][j] ^ 1;
-}
+        image[i][j] = image[i][j] ^ 1;
+    }
 }
 console.log(image);
