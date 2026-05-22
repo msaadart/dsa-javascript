@@ -1,4 +1,5 @@
-Bitwise XOR
+------------------------------------------------Bitwise XOR-------------------------------------
+
 What is Bitwise XOR:
 XOR ek bitwise operator hai jo numbers ko binary (0/1) level pr compare krta hai.
 Rule: Same bits = 0 and Different bits = 1.

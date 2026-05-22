@@ -1,4 +1,4 @@
-<= Two Pointers =>
+-----------------------------------------Two Pointers--------------------------------------
 
 Ye ek aisi approach / pattern hai jisme hum kisi array ya string (data structure) ko traverse (scan) karne ke liye do indices (pointers) ka use karte hain.
 Yeh technique specially sorted arrays ya string-based problems ko efficiently solve krne k liye use ki jaati hai, jisse brute-force (nested loops) ki need nhi hoti.

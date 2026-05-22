@@ -1,4 +1,5 @@
-Merge Intervals
+----------------------------------------Merge Intervals--------------------------------
+
 Merge Intervals ek DSA concept hai jahan hum overlapping intervals ko combine karte hain.
 	Simple meaning 
 Agar multiple times ranges ya intervals overlap kar rahe hon, to unko merge karke ek clean non-overlapping list banana.

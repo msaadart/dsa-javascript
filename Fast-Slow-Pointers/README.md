@@ -1,4 +1,5 @@
-Fast & Slow Pointers (Hare & Tortoise)
+-------------------------------Fast & Slow Pointers (Hare & Tortoise)-----------------------
+
 Is ko Floyd’s Cycle-Finding Algorithm bhi khete hain bcz is mai hum ek (linked-list) mai ye check krte hain k kahi loop ya circle to nhi hai.
 Example =>
 Hmare pas 2 scenario hai :

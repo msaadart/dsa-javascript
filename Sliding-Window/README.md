@@ -1,4 +1,4 @@
-Sliding Window!
+--------------------------------------Sliding Window------------------------------------
 
 Q = What is Sliding Window? 
 Sliding Window ek technique hai jo array / string k upar continuous sub-array / sub-string problems solve karne k kaam aati hai.

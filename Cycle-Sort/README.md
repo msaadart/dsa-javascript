@@ -1,4 +1,5 @@
-Cycle Sort
+-------------------------------------------Cycle Sort---------------------------------
+
 Definition
 Cycle Sort ek in-place sorting technique hai jo is principle par kaam karti hai:
 “Har element ko uski correct position par directly place karna”

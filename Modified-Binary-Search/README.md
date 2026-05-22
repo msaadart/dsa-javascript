@@ -1,4 +1,4 @@
-<!-- -------------------------------------Modified Binary Search ------------------------------------- -->
+-------------------------------------Modified Binary Search -------------------------------------
 	
 What is Modified Binary Search (Definition): 
 Ye ek algorithm hai jism ai hum data ko find / search / filter krte hai and ye mostly array pr use hota hai.
