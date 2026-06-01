@@ -33,7 +33,7 @@ Why We Use K-Way Merge:
 Time complexity best / data fast hota hai.
 Especially:
 •	Data already sorted ho
-•	Data kafi large ho
+•	Data kafi large hos
 •	Memory limited ho
 
 

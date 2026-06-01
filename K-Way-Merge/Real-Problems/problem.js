@@ -33,20 +33,19 @@
 
 
 function kWayMerge(arrays, k) {
-
     // let result = [];
     let heap = [];
-
+    
     for (let i = 0; i < arrays.length; i++) {
         heap.push([arrays[i][0], i, 0]);
     }
     heap.sort((a, b) => a[0] - b[0]);
-  
+    
     let count = 0;
-
+    
     while (heap.length > 0) {
         let [value, arrayIndex, elementIndex] = heap.shift();
-
+        
         count++;
         if(count === k){
             return value;
