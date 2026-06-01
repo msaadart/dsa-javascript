@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hospital Emergency System</title>
+
+        <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h3 {
+            margin-top: 30px;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 8px;
+        }
+
+        #queueDisplay p {
+            background: white;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+            border-left: 4px solid #6c757d;
+        }
+
+        /* Jab code text ka color 'red' karega, to yeh line design ko critical look degi */
+        #queueDisplay p[style*="color: red"] {
+            border-left: 6px solid #dc3545 !important;
+            background-color: #fff5f5;
+            font-weight: bold;
+        }
+    </style>
+    </head>
+<body>
+
+    <input type="text" id="patientName" placeholder="Patient Name">
+
+    <select id="severityLevel">
+        <option value="3">Mild (Level 1)</option>
+        <option value="4">Moderate (Level 2)</option>
+        <option value="5">Severe (Level 3)</option>
+        <option value="6">Critical (Level 4)</option>
+    </select>
+
+    <button onclick="runHospitalSystem()">Submit</button>
+
+    <h3>Doctors Live Queue:</h3>
+    <div id="queueDisplay"></div>
+
+
+    <script src="hospital-emergency.js"></script>
+</body>
+
+</html>
