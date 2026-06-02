@@ -25,13 +25,7 @@ function knapsack(weights, capacity) {
         let take = 0;
 
         if (weights[index] <= remaining) {
-
-            take =
-                weights[index] +
-                solve(
-                    index + 1,
-                    remaining - weights[index]
-                );
+            take = weights[index] + solve(index + 1, remaining - weights[index]);
         }
 
         memo.set(
