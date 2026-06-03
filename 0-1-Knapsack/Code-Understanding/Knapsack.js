@@ -18,8 +18,7 @@ function knapsack(weights, capacity) {
         }
 
         let skip = solve(
-            index + 1,
-            remaining
+            index + 1, remaining
         );
 
         let take = 0;

@@ -43,5 +43,5 @@ function kClosest(points, k) {
     return heap.map(item => item[1]);
 }
 let points = [[4, 7], [-2, 4], [1, 3], [0, 9]];
-let k = 2;
-console.log(kClosest(points, k))
+let k = 1;
+console.log(kClosest(points, k));
