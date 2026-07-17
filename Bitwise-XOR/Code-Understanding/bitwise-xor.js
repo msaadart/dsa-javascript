@@ -58,8 +58,10 @@
 
 
 
-/////// APPROACH BY MAP / HASHMAP METHOD -->
-// let arr = [1, 2, 3, 4, 2, 1];
+
+
+///// APPROACH BY MAP / HASHMAP METHOD -->
+// let arr = [1, 2, 3, 4,4, 2, 1];
 // let map = {};
 
 // for (let i = 0; i < arr.length; i++) {
@@ -72,17 +74,17 @@
 //         map[num] = 1;
 //     }
 // }
-//     let result = [];
-//     for(let key in map){
-//         if(map[key] === 1){
-//             result.push(Number(key));
-//         }
+// let result = [];
+// for (let key in map) {
+//     if (map[key] === 1) {
+//         result.push(Number(key));
 //     }
-//     console.log(result);
+// }
+// console.log(result);
 
 
 
-/////// 2nd sample problem -->
+// /////// 2nd sample problem -->
 let image = [
     [1, 0, 0],
     [0, 1, 1],
@@ -109,6 +111,7 @@ for (let i = 0; i < image.length; i++) {
     //         image[i][j] = 0;
     //     }
     // }
+
     for (let j = 0; j < image[i].length; j++) {
         image[i][j] = image[i][j] ^ 1;
     }

@@ -39,8 +39,8 @@ function knapsack(weights, capacity) {
 }
 
 
-let weights = [45, 55, 65, 40, 60];
+let weights = [11, 31, 41, 57, 77];
 
 console.log(
-    knapsack(weights, 100)
+    knapsack(weights, 50)
 );

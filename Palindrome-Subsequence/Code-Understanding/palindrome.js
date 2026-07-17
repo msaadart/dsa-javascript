@@ -13,11 +13,11 @@ function longestPalindromeSubseq(s) {
             }
         }
     }
-    return dp[0][n - 1];
-    // return n - dp[0][n - 1]; // for minimum deletions to make the string a palindrome
+    // return dp[0][n - 1];
+    return n - dp[0][n - 1]; // for minimum deletions to make the string a palindrome
 }
 
-let str = "ABXCBAY";
+let str = "ABXCBAY";  ///A B C B A
 console.log("Longest Palindrome Size:", longestPalindromeSubseq(str));
 
 

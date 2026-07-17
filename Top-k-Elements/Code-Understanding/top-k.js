@@ -1,4 +1,5 @@
 // ////// top k elements in an array by heap - (largest)
+
 function minHeap(arr, n, i) {
     let smallest = i;
     let left = 2 * i + 1;
@@ -28,31 +29,31 @@ function topkElements(arr, k) {
 let arr = [3, 2, 14, 3, 5, 9, 10];
 let k = 3;
 let result = topkElements(arr, k);
-let output = result.sort((a, b) => a - b);
-console.log(output);
+// let output = result.sort((a, b) => a - b);
+console.log(result);
 
 
 
 // ////// top k elements in an array by heap - (smallest)
-    // function maxHeap(arr,n,i){
-    //     let largest = i;
-    //     let left = 2 * i + 1;
-    //     let right = 2 * i + 2;
+// function maxHeap(arr,n,i){
+//     let largest = i;
+//     let left = 2 * i + 1;
+//     let right = 2 * i + 2;
 
-    //     if(left < n && arr[left] > arr[largest]){
-    //         largest = left;
-    //     }
-    //     if(right < n && arr[right] > arr[largest]){
-    //         largest = right;
-    //     }
-    //     if(largest !== i){
-    //         [arr[i] , arr[largest]] = [arr[largest] , arr[i]];
-    //         maxHeap(arr , n , largest)
-    //     }
+//     if(left < n && arr[left] > arr[largest]){
+//         largest = left;
+//     }
+//     if(right < n && arr[right] > arr[largest]){
+//         largest = right;
+//     }
+//     if(largest !== i){
+//         [arr[i] , arr[largest]] = [arr[largest] , arr[i]];
+//         maxHeap(arr , n , largest)
+//     }
 
-    //     function topKElement(arr,k){
-    //         for(let i = Math.floor(k/2) - 1; i >=0; i--){
-    //             maxHeap(arr,k,i);
-    //         }
-    //     }
-    // }
+//     function topKElement(arr,k){
+//         for(let i = Math.floor(k/2) - 1; i >=0; i--){
+//             maxHeap(arr,k,i);
+//         }
+//     }
+// }

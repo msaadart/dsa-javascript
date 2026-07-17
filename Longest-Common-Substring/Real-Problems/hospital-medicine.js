@@ -36,9 +36,9 @@ function editDistance(a, b) {
                 dp[i][j] = dp[i - 1][j - 1];
             } else {
                 dp[i][j] = 1 + Math.min(
-                    dp[i - 1][j],
-                    dp[i][j - 1],
-                    dp[i - 1][j - 1]
+                    dp[i - 1][j],    // insert  /// brufenu /// brufen
+                    dp[i][j - 1],    // insert  /// pana    /// panadol
+                    dp[i - 1][j - 1] //replace  /// despron /// disprin
                 );
             }
         }
@@ -53,7 +53,7 @@ function findMedicine() {
 
     let candidates = [];
 
-    // STEP 1: FILTER (important)
+    // fiktering
     for (let i = 0; i < medicines.length; i++) {
 
         let med = medicines[i].toLowerCase();
@@ -63,12 +63,12 @@ function findMedicine() {
         }
     }
 
-    // agar koi match na mile → fallback (all medicines)
+    // if no one match 
     if (candidates.length === 0) {
         candidates = medicines;
     }
 
-    // STEP 2: BEST MATCH USING EDIT DISTANCE
+    // edit distsnce
     let best = "";
     let minDist = Infinity;
 
@@ -82,7 +82,7 @@ function findMedicine() {
         }
     }
 
-    // STEP 3: SHOW RESULT
+    // res
     document.getElementById("result").innerHTML =
         "<li>" + best + "</li>";
 }

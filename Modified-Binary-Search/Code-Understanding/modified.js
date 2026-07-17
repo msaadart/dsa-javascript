@@ -1,6 +1,6 @@
 
-function modified(arr, target) {  // 1 2 3 4 5 6 7 8 9
-    arr.sort((a,b) => a-b);       
+function modified(arr, target) { // 1 2 4 6 7 8 10
+    arr.sort((a, b) => a - b);
     let left = 0;
     let right = arr.length - 1;
 
@@ -9,15 +9,19 @@ function modified(arr, target) {  // 1 2 3 4 5 6 7 8 9
 
         if (arr[mid] === target) {
             return mid;
+            console.log("from mid");
         } else if (arr[mid] < target) {
             left = mid + 1
+            console.log("from left");
         } else {
             right = mid - 1;
+            console.log("from right");
         }
-        
+
     }
     // let err = "not found"
     // return err;
     return -1;
 }
-console.log(modified([1,2,4,6,7,8,10], 7));
+console.log(modified([1, 2, 4, 6, 7, 8, 10], 7));
+///// searching for contacts , database indexing etc

@@ -1,15 +1,15 @@
-function subsets(team) {
+function subsets(permissions) {
 
     let result = [];
 
     function backtrack(index, currentSubset) {
 
-        if (index === team.length) {
+        if (index === permissions.length) {
             result.push([...currentSubset]);
             return;
         }
 
-        currentSubset.push(team[index]);
+        currentSubset.push(permissions[index]);
         backtrack(index + 1, currentSubset);
 
         currentSubset.pop();
@@ -22,4 +22,4 @@ function subsets(team) {
     return result;
 }
 
-console.log(subsets(["ali", "umar", "farjad"]));
+console.log(subsets(["read", "write", "delete"]));
